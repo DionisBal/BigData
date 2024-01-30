@@ -18,7 +18,7 @@ if __name__ == '__main__':
     del X_reg1
     del y_reg1
 
-    X_blob1, y_blob1 = make_regression(n_samples=10000, n_features=1000, chunks=1000)
+    X_blob1, y_blob1 = make_blobs(n_samples=10000, n_features=1000, chunks=1000)
     dfx = dd.io.from_dask_array(X_blob1)
     dfy = dd.io.from_dask_array(y_blob1)
     dfx = dfx.compute()
@@ -30,7 +30,7 @@ if __name__ == '__main__':
     del X_blob1
     del y_blob1
 
-    X_class1, y_class1 = make_regression(n_samples=10000, n_features=1000, chunks=1000)
+    X_class1, y_class1 = make_classification(n_samples=10000, n_features=1000, chunks=1000)
     dfx = dd.io.from_dask_array(X_class1)
     dfy = dd.io.from_dask_array(y_class1)
     dfx = dfx.compute()
@@ -54,7 +54,7 @@ if __name__ == '__main__':
     del X_reg2
     del y_reg2
 
-    X_blob2, y_blob2 = make_regression(n_samples=100000, n_features=1000, chunks=1000)
+    X_blob2, y_blob2 = make_blobs(n_samples=100000, n_features=1000, chunks=1000)
     dfx = dd.io.from_dask_array(X_blob2)
     dfy = dd.io.from_dask_array(y_blob2)
     dfx = dfx.compute()
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     del X_blob2
     del y_blob2
 
-    X_class2, y_class2 = make_regression(n_samples=100000, n_features=1000, chunks=1000)
+    X_class2, y_class2 = make_classification(n_samples=100000, n_features=1000, chunks=1000)
     dfx = dd.io.from_dask_array(X_class2)
     dfy = dd.io.from_dask_array(y_class2)
     dfx = dfx.compute()
@@ -90,7 +90,7 @@ if __name__ == '__main__':
     del X_reg3
     del y_reg3
 
-    X_blob3, y_blob3 = make_regression(n_samples=1000000, n_features=500, chunks=500)
+    X_blob3, y_blob3 = make_blobs(n_samples=1000000, n_features=500, chunks=500)
     dfx = dd.io.from_dask_array(X_blob3)
     dfy = dd.io.from_dask_array(y_blob3)
     dfx = dfx.compute()
@@ -102,7 +102,7 @@ if __name__ == '__main__':
     del X_blob3
     del y_blob3
 
-    X_class3, y_class3 = make_regression(n_samples=1000000, n_features=500, chunks=500)
+    X_class3, y_class3 = make_classification(n_samples=1000000, n_features=500, chunks=500)
     dfx = dd.io.from_dask_array(X_class3)
     dfy = dd.io.from_dask_array(y_class3)
     dfx = dfx.compute()
